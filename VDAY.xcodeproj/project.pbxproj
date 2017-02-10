@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7138E951E4BDF0400FE3023 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7138E941E4BDF0400FE3023 /* DataViewController.swift */; };
+		C7138E971E4BDF7300FE3023 /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7138E961E4BDF7300FE3023 /* WorkViewController.swift */; };
+		C7138E991E4BE4FE00FE3023 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7138E981E4BE4FE00FE3023 /* PlanViewController.swift */; };
+		C7138E9B1E4BE7B300FE3023 /* FightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7138E9A1E4BE7B300FE3023 /* FightViewController.swift */; };
+		C75F57D51E4C181600A424A4 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F57D41E4C181600A424A4 /* AddViewController.swift */; };
+		C75F57D71E4C2B9A00A424A4 /* EatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F57D61E4C2B9A00A424A4 /* EatViewController.swift */; };
+		C75F57DB1E4CDAAF00A424A4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F57DA1E4CDAAF00A424A4 /* SettingViewController.swift */; };
+		C75F57DD1E4CE87E00A424A4 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F57DC1E4CE87E00A424A4 /* DateViewController.swift */; };
+		C75F57DF1E4CE89100A424A4 /* ChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F57DE1E4CE89100A424A4 /* ChoreViewController.swift */; };
+		C75F57E11E4D2C5B00A424A4 /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F57E01E4D2C5B00A424A4 /* AddPlanViewController.swift */; };
+		C75F57E31E4D2C6A00A424A4 /* AddChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F57E21E4D2C6A00A424A4 /* AddChoreViewController.swift */; };
 		C7E997DB1E4A65FB00467D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E997DA1E4A65FB00467D86 /* AppDelegate.swift */; };
-		C7E997DD1E4A65FB00467D86 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E997DC1E4A65FB00467D86 /* RootViewController.swift */; };
-		C7E997DF1E4A65FB00467D86 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E997DE1E4A65FB00467D86 /* DataViewController.swift */; };
 		C7E997E11E4A65FB00467D86 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E997E01E4A65FB00467D86 /* ModelController.swift */; };
 		C7E997E41E4A65FB00467D86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E997E21E4A65FB00467D86 /* Main.storyboard */; };
 		C7E997E61E4A65FB00467D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7E997E51E4A65FB00467D86 /* Assets.xcassets */; };
@@ -36,10 +45,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C7138E941E4BDF0400FE3023 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		C7138E961E4BDF7300FE3023 /* WorkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
+		C7138E981E4BE4FE00FE3023 /* PlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		C7138E9A1E4BE7B300FE3023 /* FightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightViewController.swift; sourceTree = "<group>"; };
+		C75F57D41E4C181600A424A4 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		C75F57D61E4C2B9A00A424A4 /* EatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatViewController.swift; sourceTree = "<group>"; };
+		C75F57DA1E4CDAAF00A424A4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C75F57DC1E4CE87E00A424A4 /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		C75F57DE1E4CE89100A424A4 /* ChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoreViewController.swift; sourceTree = "<group>"; };
+		C75F57E01E4D2C5B00A424A4 /* AddPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
+		C75F57E21E4D2C6A00A424A4 /* AddChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddChoreViewController.swift; sourceTree = "<group>"; };
 		C7E997D71E4A65FB00467D86 /* VDAY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VDAY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E997DA1E4A65FB00467D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C7E997DC1E4A65FB00467D86 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		C7E997DE1E4A65FB00467D86 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		C7E997E01E4A65FB00467D86 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		C7E997E31E4A65FB00467D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7E997E51E4A65FB00467D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,11 +119,20 @@
 		C7E997D91E4A65FB00467D86 /* VDAY */ = {
 			isa = PBXGroup;
 			children = (
-				C7E997DA1E4A65FB00467D86 /* AppDelegate.swift */,
-				C7E997DC1E4A65FB00467D86 /* RootViewController.swift */,
-				C7E997DE1E4A65FB00467D86 /* DataViewController.swift */,
-				C7E997E01E4A65FB00467D86 /* ModelController.swift */,
+				C7138E941E4BDF0400FE3023 /* DataViewController.swift */,
+				C75F57D61E4C2B9A00A424A4 /* EatViewController.swift */,
+				C75F57DA1E4CDAAF00A424A4 /* SettingViewController.swift */,
+				C7138E961E4BDF7300FE3023 /* WorkViewController.swift */,
+				C75F57D41E4C181600A424A4 /* AddViewController.swift */,
+				C75F57DC1E4CE87E00A424A4 /* DateViewController.swift */,
+				C7138E9A1E4BE7B300FE3023 /* FightViewController.swift */,
+				C75F57DE1E4CE89100A424A4 /* ChoreViewController.swift */,
+				C75F57E21E4D2C6A00A424A4 /* AddChoreViewController.swift */,
+				C7138E981E4BE4FE00FE3023 /* PlanViewController.swift */,
+				C75F57E01E4D2C5B00A424A4 /* AddPlanViewController.swift */,
 				C7E997E21E4A65FB00467D86 /* Main.storyboard */,
+				C7E997DA1E4A65FB00467D86 /* AppDelegate.swift */,
+				C7E997E01E4A65FB00467D86 /* ModelController.swift */,
 				C7E997E51E4A65FB00467D86 /* Assets.xcassets */,
 				C7E997E71E4A65FB00467D86 /* LaunchScreen.storyboard */,
 				C7E997EA1E4A65FB00467D86 /* Info.plist */,
@@ -199,6 +226,7 @@
 				TargetAttributes = {
 					C7E997D61E4A65FA00467D86 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7KV6KA8C2X;
 						ProvisioningStyle = Automatic;
 					};
 					C7E997EE1E4A65FB00467D86 = {
@@ -265,10 +293,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7E997DD1E4A65FB00467D86 /* RootViewController.swift in Sources */,
+				C75F57D51E4C181600A424A4 /* AddViewController.swift in Sources */,
+				C7138E951E4BDF0400FE3023 /* DataViewController.swift in Sources */,
+				C7138E991E4BE4FE00FE3023 /* PlanViewController.swift in Sources */,
+				C7138E971E4BDF7300FE3023 /* WorkViewController.swift in Sources */,
+				C75F57DD1E4CE87E00A424A4 /* DateViewController.swift in Sources */,
+				C75F57E11E4D2C5B00A424A4 /* AddPlanViewController.swift in Sources */,
+				C75F57DF1E4CE89100A424A4 /* ChoreViewController.swift in Sources */,
 				C7E997E11E4A65FB00467D86 /* ModelController.swift in Sources */,
-				C7E997DF1E4A65FB00467D86 /* DataViewController.swift in Sources */,
 				C7E997DB1E4A65FB00467D86 /* AppDelegate.swift in Sources */,
+				C75F57D71E4C2B9A00A424A4 /* EatViewController.swift in Sources */,
+				C75F57E31E4D2C6A00A424A4 /* AddChoreViewController.swift in Sources */,
+				C7138E9B1E4BE7B300FE3023 /* FightViewController.swift in Sources */,
+				C75F57DB1E4CDAAF00A424A4 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7KV6KA8C2X;
 				INFOPLIST_FILE = VDAY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CM.VDAY;
@@ -430,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7KV6KA8C2X;
 				INFOPLIST_FILE = VDAY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CM.VDAY;
@@ -511,6 +550,7 @@
 				C7E998051E4A65FB00467D86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7E998061E4A65FB00467D86 /* Build configuration list for PBXNativeTarget "VDAYTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +559,7 @@
 				C7E998081E4A65FB00467D86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7E998091E4A65FB00467D86 /* Build configuration list for PBXNativeTarget "VDAYUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +568,7 @@
 				C7E9980B1E4A65FB00467D86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
