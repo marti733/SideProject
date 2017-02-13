@@ -1,27 +1,21 @@
 //
-//  EatViewController.swift
+//  NewEatViewController.swift
 //  VDAY
 //
-//  Created by Cheyenne Martinez on 2/8/17.
+//  Created by Cheyenne Martinez on 2/10/17.
 //  Copyright © 2017 Cheyenne Martinez. All rights reserved.
 //
 
 import UIKit
 
-class EatViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate  {
-   
-   // Buttons, labels, and pick view from view controll
-   @IBOutlet weak var food: UIPickerView!
-   @IBOutlet weak var place: UILabel!
-   @IBOutlet weak var eat: UILabel!
-   @IBOutlet weak var getPlace: UIButton!
-   @IBOutlet weak var removePlace: UIButton!
+class NewEatViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate {
 
+   @IBOutlet weak var newRest: UITextField!
+   @IBOutlet weak var category: UIPickerView!
    
-   var type = 0;
-   //var select = 0;
-   var randNum = 0;
+   var type = 0
    
+   let foodData = ["American", "Asian", "Breakfast", "Mexican", "Indian", "Dessert", "Fast Food", "Mediterranean"]
    
    // Default Restaurants
    let americand = ["Chili's", "Steak'n'Shake", "Domino's", "Freshii", "Stacked Pickle", "Spageddies", "308 on State", "Lotsa", "Triple XXX", "Dairy Queen", "Scotty's Brewhouse", "Buffalo Wild Wings", "Noodles and Company", "Red Seven"]
@@ -43,18 +37,17 @@ class EatViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDel
    var fast = [String]()
    var mediterranean = [String]()
    
-   let foodData = ["American", "Asian", "Breakfast", "Mexican", "Indian", "Dessert", "Fast Food", "Mediterranean"]
-   
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
       
-        food.delegate = self
-        food.dataSource = self
+      //
+      category.delegate = self
+      category.dataSource = self
       
-        removePlace.isHidden = true
-        place.isHidden = true
+      newRest.text = ""
+      
       
       // Choose which string to load
       if (UserDefaults.standard.array(forKey: "american") == nil) {
@@ -104,18 +97,6 @@ class EatViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDel
       } else {
          mediterranean = UserDefaults.standard.array(forKey: "mediterranean") as! [String]
       }
-      
-      /*
-       print(american)
-       print(asian)
-       print(breakfast)
-       print(mexican)
-       print(indian)
-       print(dessert)
-       print(fast)
-       print(mediterranean)
-       */
-      
     }
 
     override func didReceiveMemoryWarning() {
@@ -140,8 +121,6 @@ class EatViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDel
       type = row
    }
 
-   
-
     /*
     // MARK: - Navigation
 
@@ -151,39 +130,27 @@ class EatViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDel
         // Pass the selected object to the new view controller.
     }
     */
-
-   @IBAction func gen_restaurant(_ sender: UIButton) {
-      // Show label and remove button
-      removePlace.isHidden = false
-      place.isHidden = false
+   @IBAction func saveRest(_ sender: UIButton) {
+      let new = newRest.text!
       
-      // Generate a place to eat
-      place.backgroundColor = eat.backgroundColor
-      getPlace.setTitle("Get a different place?", for: UIControlState.normal )
-      if (type == 0) {
-         randNum = Int(arc4random_uniform(UInt32(american.count)))
-         place.text = american[randNum]
-      } else if (type == 1) {
-         randNum = Int(arc4random_uniform(UInt32(asian.count)))
-         place.text = asian[randNum]
-      } else if (type == 2) {
-         randNum = Int(arc4random_uniform(UInt32(breakfast.count)))
-         place.text = breakfast[randNum]
-      } else if (type == 3) {
-         randNum = Int(arc4random_uniform(UInt32(mexican.count)))
-         place.text = mexican[randNum]
-      } else if (type == 4) {
-         randNum = Int(arc4random_uniform(UInt32(indian.count)))
-         place.text = indian[randNum]
-      } else if (type == 5) {
-         randNum = Int(arc4random_uniform(UInt32(dessert.count)))
-         place.text = dessert[randNum]
-      } else if ( type == 6) {
-         randNum = Int(arc4random_uniform(UInt32(fast.count)))
-         place.text = fast[randNum]
-      } else {
-         randNum = Int(arc4random_uniform(UInt32(mediterranean.count)))
-         place.text = mediterranean[randNum]
+      switch(type) {
+      case 0:
+         american.append(new)
+      case 1:
+         asian.append(new)
+      case 2:
+         breakfast.append(new)
+      case 3:
+         mexican.append(new)
+      case 4:
+         indian.append(new)
+      case 5:
+         dessert.append(new)
+      case 6:
+         fast.append(new)
+      case 7:
+         mediterranean.append(new)
+      default : break
       }
       
       // Save data
@@ -196,48 +163,18 @@ class EatViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDel
       UserDefaults.standard.set(self.fast, forKey: "fast")
       UserDefaults.standard.set(self.mediterranean, forKey: "mediterranean")
       
-   }
-   
-   @IBAction func delete_place(_ sender: UIButton) {
-      let select = randNum
-      
       // create the alert
-      let alert = UIAlertController(title: "Notice", message: "Are you sure you want to remove this restaraunt?", preferredStyle: UIAlertControllerStyle.alert)
+      let alert = UIAlertController(title: "Notice", message: "Restaurant Saved", preferredStyle: UIAlertControllerStyle.alert)
       
       // add the actions (buttons)
-      alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: { action in
-         switch(self.type) {
-         case 0: self.american.remove(at: select)
-         case 1: self.asian.remove(at: select)
-         case 2: self.breakfast.remove(at: select)
-         case 3: self.mexican.remove(at: select)
-         case 4: self.indian.remove(at: select)
-         case 5: self.dessert.remove(at: select)
-         case 6: self.fast.remove(at: select)
-         case 7: self.mediterranean.remove(at: select)
-         default: break
-         }
+      alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: { action in
          
-         //Hide buttons again
-         self.removePlace.isHidden = true
-         self.place.isHidden = true
       }))
-      alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
-      
+
       // show the alert
       self.present(alert, animated: true, completion: nil)
+
       
-      // Save data
-      UserDefaults.standard.set(self.american, forKey: "american")
-      UserDefaults.standard.set(self.asian, forKey: "asian")
-      UserDefaults.standard.set(self.breakfast, forKey: "breakfast")
-      UserDefaults.standard.set(self.mexican, forKey: "mexican")
-      UserDefaults.standard.set(self.indian, forKey: "indian")
-      UserDefaults.standard.set(self.dessert, forKey: "dessert")
-      UserDefaults.standard.set(self.fast, forKey: "fast")
-      UserDefaults.standard.set(self.mediterranean, forKey: "mediterranean")
    }
-   
-   
-   
+
 }

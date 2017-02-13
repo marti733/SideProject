@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7073FE11E4E53FA003B4957 /* NewEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7073FE01E4E53FA003B4957 /* NewEatViewController.swift */; };
 		C7138E951E4BDF0400FE3023 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7138E941E4BDF0400FE3023 /* DataViewController.swift */; };
 		C7138E971E4BDF7300FE3023 /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7138E961E4BDF7300FE3023 /* WorkViewController.swift */; };
 		C7138E991E4BE4FE00FE3023 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7138E981E4BE4FE00FE3023 /* PlanViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C7073FE01E4E53FA003B4957 /* NewEatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEatViewController.swift; sourceTree = "<group>"; };
 		C7138E941E4BDF0400FE3023 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		C7138E961E4BDF7300FE3023 /* WorkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
 		C7138E981E4BE4FE00FE3023 /* PlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				C7138E981E4BE4FE00FE3023 /* PlanViewController.swift */,
 				C75F57E01E4D2C5B00A424A4 /* AddPlanViewController.swift */,
 				C7E997E21E4A65FB00467D86 /* Main.storyboard */,
+				C7073FE01E4E53FA003B4957 /* NewEatViewController.swift */,
 				C7E997DA1E4A65FB00467D86 /* AppDelegate.swift */,
 				C7E997E01E4A65FB00467D86 /* ModelController.swift */,
 				C7E997E51E4A65FB00467D86 /* Assets.xcassets */,
@@ -299,6 +302,7 @@
 				C7138E971E4BDF7300FE3023 /* WorkViewController.swift in Sources */,
 				C75F57DD1E4CE87E00A424A4 /* DateViewController.swift in Sources */,
 				C75F57E11E4D2C5B00A424A4 /* AddPlanViewController.swift in Sources */,
+				C7073FE11E4E53FA003B4957 /* NewEatViewController.swift in Sources */,
 				C75F57DF1E4CE89100A424A4 /* ChoreViewController.swift in Sources */,
 				C7E997E11E4A65FB00467D86 /* ModelController.swift in Sources */,
 				C7E997DB1E4A65FB00467D86 /* AppDelegate.swift in Sources */,

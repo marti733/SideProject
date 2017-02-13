@@ -30,6 +30,8 @@ class ChoreViewController: UIViewController, UITableViewDataSource, UITableViewD
       tableView.dataSource = self
       tableView.delegate = self
       tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+      
+      tableView.reloadSectionIndexTitles()
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,6 +75,39 @@ class ChoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Pass the selected object to the new view controller.
     }
     */
+
+   @IBAction func trash(_ sender: UIButton) {
+      // Show the alert
+      let alert = UIAlertController(title: "Notice", message: "Are you sure you want to remove all listed chores?", preferredStyle: UIAlertControllerStyle.alert)
+      
+      // add the actions (buttons)
+      alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: { action in
+         UserDefaults.standard.set(nil, forKey: "todo")
+         
+         
+      }))
+      alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+      
+      // show the alert
+      self.present(alert, animated: true, completion: nil)
+   }
+
+   @IBAction func delete_todo(_ sender: UIButton) {
+      // Show the alert
+      let alert = UIAlertController(title: "Notice", message: "Are you sure you want to remove all listed chores?", preferredStyle: UIAlertControllerStyle.alert)
+      
+      // add the actions (buttons)
+      alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: { action in
+         self.todo = [String]()
+         UserDefaults.standard.set(nil, forKey: "todo")
+         self.tableView.reloadData()
+         
+      }))
+      alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+      
+      // show the alert
+      self.present(alert, animated: true, completion: nil)
+   }
 
 
 }

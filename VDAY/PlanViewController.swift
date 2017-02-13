@@ -37,6 +37,8 @@ class PlanViewController: UIViewController, UITableViewDataSource, UITableViewDe
       tableView.delegate = self
       tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cells")
       
+      tableView.reloadSectionIndexTitles()
+      
       
     }
 
@@ -84,5 +86,25 @@ class PlanViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Pass the selected object to the new view controller.
     }
     */
+
+   @IBAction func delete_plan(_ sender: UIButton) {
+      // Show the alert
+      let alert = UIAlertController(title: "Notice", message: "Are you sure you want to remove all listed chores?", preferredStyle: UIAlertControllerStyle.alert)
+      
+      // add the actions (buttons)
+      alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: { action in
+         self.nameData = [String]()
+         self.dateData = [String]()
+         UserDefaults.standard.set(nil, forKey: "nameKey")
+         UserDefaults.standard.set(nil, forKey: "dateKey")
+         self.tableView.reloadData()
+         
+      }))
+      alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+      
+      // show the alert
+      self.present(alert, animated: true, completion: nil)
+   }
+
 
 }
